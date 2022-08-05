@@ -11,7 +11,7 @@ if (isset($_POST['signup'])) {
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
 
-    echo $password;
+    // echo $password;
 
     if (!preg_match("/^[a-zA-Z ]+$/", $name)) {
         $name_error = "Name must contain only alphabets and space";

@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['user_id'])) {
+        header('location:login.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +21,7 @@
     <div class="container py-5">
         <div class="card text-center">
             <div class="card-header">
-                Welcome <?php session_start(); echo $_SESSION['user_name']?>
+                Welcome <?php echo $_SESSION['user_name']?>
             </div>
             <div class="card-body">
                 <h5 class="card-title">Welcome to user dashboard!!!</h5>
